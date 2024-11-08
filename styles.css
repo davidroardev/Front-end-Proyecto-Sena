@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Harmattan";
+}
+
+.logo{
+    max-width: 5rem;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #E6E6E6;
+
+}
+
+.nav-list{
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+.links{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    transition: all 0.4s ease-in;
+    border-radius: 8px;
+}
+
+.links:hover{
+    color: #E6E6E6;
+    background-color: black;
+    padding: 5px 10px;
+}
+
+.abrir-menu{
+    display: none;
+    border: 0;
+    background-color: #E6E6E6;
+    font-size: 30px;
+    cursor: pointer;
+}
+.cerrar-menu{
+    display: none;
+}
+
+@media screen and (max-width: 650px) {
+    .abrir-menu{
+        display: block;
+    }
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: black;
+        padding: 30px;
+        bottom: 0;
+        box-shadow: 0 0 0 100vmax rgba(0,0,0,.3) ;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 15px;
+    }
+    
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav-list{
+        flex-direction: column;
+        align-items: end;
+    }
+    
+    .cerrar-menu{
+        display: block;
+        font-size: 30px;
+        color: black ;
+        background-color: #FFFF00;
+        border: 0;
+        padding: 0;
+
+    }
+
+    .links{
+        color: #E6E6E6;
+    }
+    
+    .links:hover{
+        color: black;
+        background-color: #FFFF00;
+        padding: 5px 10px;
+    }
+}
