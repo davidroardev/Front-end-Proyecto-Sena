@@ -34,7 +34,7 @@ header{
 }
 
 .links:hover{
-    color: #E6E6E6;
+    color: #FFFF00;
     background-color: black;
     padding: 5px 10px;
 }
@@ -68,11 +68,14 @@ header{
         flex-direction: column;
         align-items: end;
         gap: 15px;
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Transición suave */
     }
     
     .nav.visible{
         opacity: 1;
         visibility: visible;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        
     }
     .nav-list{
         flex-direction: column;
@@ -82,10 +85,11 @@ header{
     .cerrar-menu{
         display: block;
         font-size: 30px;
-        color: black ;
-        background-color: #FFFF00;
-        border: 0;
+        background-color: transparent;
+        color: #FFFF00 ;
         padding: 0;
+        border: none;
+        cursor: pointer;
 
     }
 
@@ -104,7 +108,13 @@ header{
     }
     .maincont{
         justify-content: center;
+        gap: 0;
     }
+
+    .ropa {
+        width: 100%; /* Aumenta el ancho en pantallas más pequeñas */
+    }
+
 }
 
 .asidecont{
@@ -174,6 +184,7 @@ header{
 .ropa{
     border: solid 2px #E6E6E6;
     width: 80%;
+    max-width: 100%;
     height: 72vh;
     margin: 8px 0;
     border-radius: 8px;
@@ -182,7 +193,7 @@ header{
     align-items: first baseline;
     flex-wrap: wrap;
     overflow-y: scroll; /* Activa el desplazamiento vertical */
-    
+    padding: 20px 10px;
 }
 
 .item{
@@ -214,7 +225,6 @@ header{
 
 .footer{
     background-color: black;
-    position: absolute;
     bottom: 0;
     display: flex;
     width: 100%;
