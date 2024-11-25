@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Harmattan:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://scontent.cdninstagram.com/v/t51.2885-19/403850613_1397650241169534_5701784533090272667_n.jpg?stp=cp0_dst-jpg_s110x80&_nc_cat=110&ccb=1-7&_nc_sid=bf7eb4&_nc_ohc=xKDMkQKz-asQ7kNvgEjYOnv&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&oh=00_AYBD4Ep7gXtiCeDBD80QHmnqD1TZ44kO_U_3kgmqY6_LEg&oe=67496D17" type="image/x-icon">
+    <link rel="stylesheet" href="/estilos/styles.css">
+    <link rel="stylesheet" href="/estilos/registros.css">
+    <script src="/Scripts/hamburguesa.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Diseño Front end</title>
+</head>
+<body>
+    <header>
+        
+            <img class="logo" src="https://scontent.cdninstagram.com/v/t51.2885-19/403850613_1397650241169534_5701784533090272667_n.jpg?stp=cp0_dst-jpg_s110x80&_nc_cat=110&ccb=1-7&_nc_sid=bf7eb4&_nc_ohc=xKDMkQKz-asQ7kNvgEjYOnv&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&oh=00_AYBD4Ep7gXtiCeDBD80QHmnqD1TZ44kO_U_3kgmqY6_LEg&oe=67496D17" alt="">
+        
+        <button id="abrir" class="abrir-menu"><i class="bi bi-three-dots"></i></button>
+        
+        <nav class="nav" id="nav">
+            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x-square"></i></button>
+            <ul class="nav-list">
+                <li><a class="links" href="index.html">Home</a></li>
+                <li><a class="links" href="">Diseños</a></li>
+                <li><a class="links" href="">Novedades</a></li>
+                <li><a class="links" href="Registro-inicio.html">Iniciar Sesion/Registro </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="formcont">
+        <div class="form">
+            <form class="registerform" id="registerform">
+
+                <fieldset class="fieldset">
+                <div class="cabezaform">
+                    <div class="imglogoformcont">
+                        <img  class="imgform" src="/Imagenes/logo sinfondo-05-comprimido.png" alt=""> 
+                    </div>
+    
+                    <h2>Inicia Sesion</h2>
+                </div>
+                
+                <div class="cuerpoform">
+                    <div class="labelcont"> 
+                        <label for="username" class="label" >Nombre de Usuario:</label>
+                        <input class="imput" type="text" name="username" id="username" minlength="2" max="15" placeholder="Ingrese Nombre usuario" required>
+                    </div>
+                    
+                    <div class="labelcont">
+                        <label for="password" class="label"> Contraseña:</label>
+                        <input class="imput" type="password" name="password" id="password" minlength="2" placeholder="Ingrese Su contraseña" required>
+
+                    </div>
+
+                    <button class="boton" id="botoninicio" type="submit"> Iniciar Sesion</button>
+                </div>
+            </fieldset>
+            </form>
+        </div>
+
+        <div class="mascara">
+            
+        </div>
+
+        <div class="form">
+            <form class="registerform" id="registerform">
+
+                <fieldset class="fieldset">
+                <div class="cabezaform">
+                    <div class="imglogoformcont">
+                        <img  class="imgform" src="/Imagenes/logo sinfondo-05-comprimido.png" alt=""> 
+                    </div>
+    
+                    <h2>Registrate</h2>
+                </div>
+                
+                <div class="cuerpoform">
+                    <div class="labelcont"> 
+                        <label for="username" class="label" >Nombre de Usuario:</label>
+                        <input class="imput" type="text" name="username" id="username" minlength="2" max="15" placeholder="Ingrese Nombre usuario" required>
+                    </div>
+                    
+                    <div class="labelcont">
+                        <label for="password" class="label"> Contraseña:</label>
+                        <input class="imput" type="password" name="password" id="password" minlength="2" placeholder="Ingrese Su contraseña" required>
+
+                    </div>
+
+                    <div class="labelcont">
+                        <label for="name" class="label"> Apellido:</label>
+                        <input class="imput" type="text" name="name" id="name" minlength="2" maxlength="15" placeholder="Ingrese Su Apellido" required>
+
+                    </div>
+
+                    <div class="labelcont">
+                        <label for="phoneNumber" class="label"> Numero telefonico:</label>
+                        <input class="imput" type="number" name="phoneNumber" id="phoneNumber" placeholder="Ingrese Su numero telefonico" required>
+
+                    </div>
+
+                    <div class="labelcont">
+                        <label for="address" class="label"> Direccion:</label>
+                        <input class="imput" type="text" name="address" id="address" placeholder="Ingrese Su Direccion" required>
+
+                    </div>
+
+                    <div class="labelcont">
+                        <label for="email" class="label"> Correo Electronico:</label>
+                        <input class="imput" type="email" name="email" id="email" placeholder="Ingrese Su Direccion" required>
+
+                    </div>
+
+                    <button class="boton" id="botoninicio" type="submit"> Iniciar Sesion</button>
+                </div>
+            </fieldset>
+            </form>
+        </div>
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="contactenos">
+            <h3>Contactanos </h3>
+            <div class="divcontacto">
+                <p></p>numero
+                <p></p>direccion
+                <p></p>pais
+            </div>
+
+        </div>
+        <div class="piepagina">
+            <p class="parrafo">
+                Totem Clothing es una marca de ropa urbana que se enfoca en darle estilo las <br> personas que sienten queno encajan del todo en el estigma de lo urbano en una ciudad tan inusual como Bogotá 
+            </p>
+        </div>
+        <div class="redes">
+            <h3>Redes</h3>
+            <div class="redescont">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-whatsapp"></i>
+            </div>
+        </div>
+
+    </footer>
+</body>
+</html>

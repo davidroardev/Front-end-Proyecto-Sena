@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Harmattan";
+}
+
+.formcont{
+    display: flex;
+    max-width: 100%;
+    border: solid 2px chartreuse;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px;
+    gap: 10px;
+}
+
+.registerform{
+    background-color: #FFEDF2;
+    border: solid 2px #e7e9d2;
+    box-shadow: 2px 3px  4px #E3B1B1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    min-width: 30%;
+    max-width: max-content;
+    
+}
+
+.fieldset{
+    padding: 20px 20px;
+    border-radius: 8px;
+    border: solid 2px #9B9B9B;
+}
+
+.cabezaform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2{
+    text-align: center;
+    font-size: 35px;
+}
+
+.imglogoformcont{
+    max-width: 350px;
+}
+
+.imgform{
+    max-width: 100%;
+    text-align: center;
+}
+
+.cuerpoform{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 20px;
+}
+
+.labelcont{
+    display: flex;
+    flex-direction: column;
+}
+
+.label{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.imput{
+    border: none;
+    background-color: #C9C9C9;
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 5px 20px;
+    color: black;
+}
+
+.imput::placeholder{
+    color: black;
+}
+
+.imput::-webkit-inner-spin-button {
+  -webkit-appearance: none; /* Elimina el estilo predeterminado */
+  margin: 0; /* Remueve cualquier margen */
+}
+
+.boton{
+    padding: 5px 10px;
+    border-radius: 6px;
+    background-color: black;
+    color: yellow;
+    margin-top: 10px;
+    font-size: 20px;
+    font-style: oblique;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+}
+
+.boton:hover{
+    padding: 8px 13px;
+    transition: all 0.3 ease-in ;
+}
+
+.mascara{
+    width: 150px;
+    background-image: url('/Imagenes/logo\ sinfondomascara\ comprimido.png'); /* Imagen por defecto */
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 9/16;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .formcont{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .mascara{
+        background-image: url('/Imagenes/imagen\ de\ perfil\ totem-10\ comprimido.png');
+        aspect-ratio: 16/9;
+        width: 250px;
+    }
+}
+
+
+
