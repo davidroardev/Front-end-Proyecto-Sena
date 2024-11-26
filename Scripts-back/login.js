@@ -2,7 +2,8 @@ window.onload = (event) =>{
     const loginForm = document.getElementById('loginForm');
     const loginMessage = document.getElementById('loginMessage');
 
-    const registerForm = document.getElementById('registerForm')
+    const registerForm = document.getElementById('registerForm');
+    const registerMessage = document.getElementById('registerMessage')
 
     loginForm.addEventListener('submit', async function(event){
 
@@ -15,31 +16,37 @@ window.onload = (event) =>{
             const response = await fetch('http://localhost:3000/api/login',{
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'aplication/json'
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({userName:Name, password: password})
             });
 
             const data = await response.json();
             console.log(data);
+            const encodeData = btoa(JSON.stringify(data));
+            console.log(encodeData);
             if (response.ok){
                 loginMessage.textContent = 'Login Exitoso';
                 loginMessage.style.color = 'green';
+                window.location.href = `/Paginas/dashboard.html#${encodeData}`;
             }else{
-                loginMessage.textContent = data.messge||'Error en el login';
+                loginMessage.textContent = data.message||'Error en el login';
                 loginMessage.style.color = 'red';
             }
         } catch (error) {
             console.error(error)
-            loginMessagge.textContent = 'Error en el servidor';
-            loginMessagge.style.color = 'red';
+            loginMessage.textContent = 'Error en el servidor';
+            loginMessage.style.color = 'red';
         }
     });
 
     registerForm.addEventListener('submit', async function(event){
 
-        const NewUserName = document.getElementById('NewUserName').value;
-        const Newpassword = document.getElementById('Newpassword').value;
+        event.preventDefault();//Previene que se envie el formulario y nos redirija a otr apagina
+        
+
+        const NewUserName = document.getElementById('newUserName').value;
+        const Newpassword = document.getElementById('newPassword').value;
         const apellido = document.getElementById('name').value
         const numeroTelefono = document.getElementById('phoneNumber').value
         const direccion = document.getElementById('address').value
@@ -49,7 +56,7 @@ window.onload = (event) =>{
             const response = await fetch('http://localhost:3000/user/register',{
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'aplication/json'
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({userName: NewUserName, password: Newpassword, apellido: apellido,numeroTelefonico: numeroTelefono,direccion: direccion,correoElectronico: email})
             });
@@ -57,16 +64,16 @@ window.onload = (event) =>{
             const data = await response.json();
             console.log(data);
             if (response.ok){
-                loginMessage.textContent = 'Login Exitoso';
-                loginMessage.style.color = 'green';
+                registerMessage.textContent = 'Registro Exitoso';
+                registerMessage.style.color = 'green';
             }else{
-                loginMessage.textContent = data.messge||'Error en el login';
-                loginMessage.style.color = 'red';
+                registerMessage.textContent = data.message||'Error en el Registro';
+                registerMessage.style.color = 'red';
             }
         } catch (error) {
             console.error(error)
-            loginMessage.textContent = 'Error en el servidor';
-            loginMessage.style.color = 'red';
+            registerMessage.textContent = 'Error en el servidor del Registro';
+            registerMessage.style.color = 'red';
         }
     });
 };

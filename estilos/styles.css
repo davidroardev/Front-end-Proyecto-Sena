@@ -130,6 +130,7 @@ header{
     border-top-right-radius: 8px ;
     border-bottom-right-radius: 8px ;
     font-size: 20px;
+    
 }
 
 .filtrolist{
@@ -232,7 +233,11 @@ header{
     font-size: 15px;
     justify-content: space-around;
     align-items: center;
-    position: relative;
+    margin-top: 35px;
+}
+
+.aredes{
+    color:#FFFF00;
 }
 
 .divcontacto{
@@ -254,4 +259,54 @@ font-size: 20px;
 
 /* image 1 */
 
+.dash{
+    background-color: #E6E6E6;
+    margin: 20px 0;
+    width: 80vw;
+    max-width: 100vw;
+    height: 100px;
+    border-radius: 6px;
+    border: solid 2px #d3bec4;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.3) ;
+}
+.dashh2{
+    font-size: 30px;
+    text-align: center;
+}
 
+.dashul{
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    margin-right: 10px;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%; /* Asegúrate de ocupar toda la altura del contenedor padre */
+
+}
+
+.dashlink{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    transition: all 0.4s ease-in;
+    border-radius: 8px;
+    
+}
+
+
+.dashlink:hover{
+    color: #FFFF00;
+    background-color: black;
+    padding: 5px 10px;
+}
+
+.dashcont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
