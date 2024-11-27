@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/estilos/styles.css">
     <link rel="stylesheet" href="/estilos/registros.css">
     <script src="/Scripts/hamburguesa.js" defer></script>
-    <script src="/Scripts-back/productos.js" defer></script>
+    <script src="/Scripts-back/users.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>ProductosController</title>
 </head>
@@ -23,7 +23,7 @@
         <button class="cerrar-menu" id="cerrar"><i class="bi bi-x-square"></i></button>
         <ul class="nav-list">
             <li><a class="links" href="index.html">Home</a></li>
-            <li><a class="links" href="">Diseños</a></li>
+            <li><a class="links" href="/Paginas/diseños.html">Diseños</a></li>
             <li><a class="links" href="">Novedades</a></li>
             <li><a class="links" href="Registro-inicio.html">Iniciar Sesion/Registro </a></li>
         </ul>
@@ -37,27 +37,23 @@
             Porfavor selecciona una opcion:</h2>
             <nav class="dash" >
                 <ul class="dashul">
-                    <li><a class="dashlink" href="/Paginas/usuarios.html">Usuarios</a></li>
-                    <li><a class="dashlink" href="/Paginas/productos.html">Productos</a></li>
-                    <li><a class="dashlink c" href="index.html">Cerrar Sesion</a></li>
+                    <li><a class="dashlink" href="/Paginas/dashboard/usuarios.html">Usuarios</a></li>
+                    <li><a class="dashlink" href="/Paginas/dashboard/productos.html">Productos</a></li>
+                    <li><a class="dashlink c" href="/Paginas/index.html">Cerrar Sesion</a></li>
                 </ul>
             </nav>
             
             <section class="dash">
-                <h2 class="dashh2">Lista de inventario de Productos Totem</h2>
-                <button class="boton" id="createProducto" > Crear Producto</button>
+                <h2 class="dashh2">Lista de Usarios registrados de Totem</h2>
                 <table>
                     <thead>
                         <tr>
-                            <th>Id</th>    
-                            <th>Id Producto</th>    
-                            <th>Tipo Producto</th>
-                            <th>Nombre</th>
-                            <th>Talla</th>
-                            <th>Color</th>
-                            <th>Existencias</th>
-                            <th>Estado</th>
-                            <th>Acciones</th>
+                            <th>Nombre Usuario</th>    
+                            <th>Apellido</th>
+                            <th>Numero Celular</th>
+                            <th>Direccion</th>
+                            <th>Email</th>
+                            
                         </tr>
                     </thead>
                     <tbody id="productosTBody">

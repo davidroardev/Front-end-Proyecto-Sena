@@ -8,7 +8,7 @@ window.onload = (event) =>{
 
     createProductos.addEventListener('click', function(event){
 
-        window.location.href = '/Paginas/createProductos.html'
+        window.location.href = '/Paginas/dashboard/createProductos.html'
     })
 };
 
@@ -110,5 +110,5 @@ async function deleteProducto(id){
 };
 
  function modifyProducto(id) {
-    window.location.href = `/Paginas/updateProducto.html?id=${id}`;
+    window.location.href = `/Paginas/dashboard/updateProducto.html?id=${id}`;
 };

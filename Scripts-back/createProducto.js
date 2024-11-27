@@ -25,7 +25,7 @@ window.onload = (event) =>{
             const data = await response.json();
             if (response.ok){
                 window.alert('Producto Creado exitosamente');
-                window.location.href = '/Paginas/Productos.html'
+                window.location.href = '/Paginas/dashboard/productos.html'
             }else{
                 window.alert('No se pudo crear El Producto');
             }
