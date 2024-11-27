@@ -134,4 +134,40 @@ h2{
 }
 
 
+.modifyButton {
+    background-color: #000000;
+    display: inline-block; /* Asegura que el botón actúe como contenedor de línea */
+    cursor: pointer; /* Cambia el cursor al de un botón */
+    border: none;
+    color: #fbff00; /* Color del ícono */
+    font-size: 20px;
+    padding: 0 5px;
+    border-radius: 6px;
+    display: block;
+    margin: 10px 3px;
+}
 
+.modifyButton::before {
+    font-family: 'bootstrap-icons';
+    content: '\f4ca'; /* Código del ícono */
+    vertical-align: middle;
+}
+
+.deleteButton{
+    background-color: #fbff00;
+    display: inline-block; /* Asegura que el botón actúe como contenedor de línea */
+    cursor: pointer; /* Cambia el cursor al de un botón */
+    border: none;
+    color: #000000; /* Color del ícono */
+    font-size: 20px;
+    padding: 0 5px;
+    border-radius: 6px;
+    margin: 10px 3px;
+}
+
+.deleteButton::before{
+    font-family: 'bootstrap-icons';
+    content: '\F5DD'; /* Código del ícono */
+    vertical-align: middle;
+}
+}

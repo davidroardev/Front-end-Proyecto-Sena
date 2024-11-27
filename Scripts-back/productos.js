@@ -54,6 +54,20 @@ async function loadProductos() {
             const estadoCell = document.createElement('td');
             estadoCell.textContent = producto.estado;
 
+            const actionCell = document.createElement('td');
+
+            const modifyButton = document.createElement('button');
+            
+            modifyButton.className = 'modifyButton'
+            modifyButton.onclick = () =>modifyProducto(producto.id);
+            
+            const deleteButton = document.createElement('button');
+            deleteButton.className = 'deleteButton'
+            deleteButton.onclick = () => deleteProducto(producto.id);
+
+            actionCell.appendChild(modifyButton);
+            actionCell.appendChild(deleteButton)
+
             row.appendChild(idCell);
             row.appendChild(idProductoCell);
             row.appendChild(tipoProductoCell);
@@ -62,6 +76,7 @@ async function loadProductos() {
             row.appendChild(colorCell);
             row.appendChild(existenciasCell);
             row.appendChild(estadoCell);
+            row.appendChild(actionCell);
 
             tbody.appendChild(row);
         });
@@ -70,3 +85,26 @@ async function loadProductos() {
         console.error(error);
     }
 };
+
+async function deleteProducto(id){
+    try {
+        const response = await fetch(`http://localhost:3000/deleteProducto/${id}`,{
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        });
+        const data = await response.json();
+
+        if (response.ok){
+            window.alert('Producto Eliminado exitosamente');
+            location.reload()
+
+        }else{
+            window.alert('No se pudo Eliminar El producto');
+        }
+    } catch (error) {
+        console.error(error);
+        window.alert('hay problemas con el servidor');
+    }
+}
