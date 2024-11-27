@@ -27,7 +27,7 @@ window.onload = (event) =>{
                 window.alert('Producto Creado exitosamente');
                 window.location.href = '/Paginas/Productos.html'
             }else{
-                window.alert('No se pudo crear la categoria');
+                window.alert('No se pudo crear El Producto');
             }
         } catch (error) {
             console.error(error);

@@ -107,4 +107,8 @@ async function deleteProducto(id){
         console.error(error);
         window.alert('hay problemas con el servidor');
     }
-}
+};
+
+ function modifyProducto(id) {
+    window.location.href = `/Paginas/updateProducto.html?id=${id}`;
+};

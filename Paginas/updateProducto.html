@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/estilos/styles.css">
     <link rel="stylesheet" href="/estilos/registros.css">
     <script src="/Scripts/hamburguesa.js" defer></script>
-    <script src="/Scripts-back/createProducto.js" defer></script>
+    <script src="/Scripts-back/updateCategories.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>ProductosController</title>
 </head>
@@ -44,7 +44,7 @@
             </nav>
             
             <section class="dash">
-                <h2 class="dashh2">Crear Productos</h2>
+                <h2 class="dashh2">Actualizar Productos</h2>
                 <form class="registerform" id="productosForm">
 
                     <fieldset class="fieldset">
@@ -59,7 +59,7 @@
                     <div class="cuerpoform">
                         <div class="labelcont"> 
                             <label for="id" class="label" >Id del registro:</label>
-                            <input class="imput" type="number" name="id" id="idRegistro" minlength="2" max="15" placeholder="Id del registro" required>
+                            <input class="imput" type="number" name="id" id="idRegistro" minlength="2" max="15" placeholder="Id del registro" required readonly>
                         </div>
 
                         <div class="labelcont"> 
@@ -89,7 +89,7 @@
 
                         <div class="labelcont"> 
                             <label for="existencias" class="label" >Existencias:</label>
-                            <input class="imput" type="number" name="existencias" id="existencias" minlength="2" max="15" placeholder="Numero de existencias" required>
+                            <input class="imput" type="number" name="existencias" id="existencias" minlength="2"  placeholder="Numero de existencias" required>
                         </div>
                         
                         <div class="labelcont"> 
@@ -97,7 +97,7 @@
                             <input class="imput" type="text" name="estado" id="estado" minlength="2" max="15" placeholder="Estado del producto" required>
                         </div>
 
-                        <button class="boton" id="botoninicio" type="submit"> Crea El Producto</button>
+                        <button class="boton" id="botoninicio" type="submit"> Actualiza Los Datos Del Producto</button>
                     </div>
                 </fieldset>
                 <p id="loginMessage"></p>
