@@ -6,9 +6,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Harmattan:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="https://scontent.cdninstagram.com/v/t51.2885-19/403850613_1397650241169534_5701784533090272667_n.jpg?stp=cp0_dst-jpg_s110x80&_nc_cat=110&ccb=1-7&_nc_sid=bf7eb4&_nc_ohc=xKDMkQKz-asQ7kNvgEjYOnv&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&oh=00_AYBD4Ep7gXtiCeDBD80QHmnqD1TZ44kO_U_3kgmqY6_LEg&oe=67496D17" type="image/x-icon">
     <link rel="stylesheet" href="/estilos/styles.css">
-    <script src="/Scripts-back/dashboard.js" defer></script>
+    <script src="/Scripts/hamburguesa.js" defer></script>
+    <script src="/Scripts-back/productos.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>Document</title>
+    <title>ProductosController</title>
 </head>
 <body>
     <header>
@@ -26,7 +27,7 @@
             <li><a class="links" href="Registro-inicio.html">Iniciar Sesion/Registro </a></li>
         </ul>
     </nav>
-</header>
+    </header>
 
     <main class="maincont">
 
@@ -40,33 +41,60 @@
                     <li><a class="dashlink c" href="index.html">Cerrar Sesion</a></li>
                 </ul>
             </nav>
+            
+            <section class="dash">
+                <h2 class="dashh2">Lista de inventario de Productos Totem</h2>
+                <button class="boton" id="createProducto" > Crear Producto</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>    
+                            <th>Id Producto</th>    
+                            <th>Tipo Producto</th>
+                            <th>Nombre</th>
+                            <th>Talla</th>
+                            <th>Color</th>
+                            <th>Existencias</th>
+                            <th>Estado</th>
+                            <th>Modificar</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productosTBody">
+
+                    </tbody>
+                </table>
+            </section>
+
         </section>
+
+        
     </main>
 
-<footer class="footer">
-    <div class="contactenos">
-        <h3>Contactanos </h3>
-        <div class="divcontacto">
-            <p></p>numero
-            <p></p>direccion
-            <p></p>pais
+    <footer class="footer">
+        <div class="contactenos">
+            <h3>Contactanos </h3>
+            <div class="divcontacto">
+                <p></p>numero
+                <p></p>direccion
+                <p></p>pais
+            </div>
+
+        </div>
+        <div class="piepagina">
+            <p class="parrafo">
+                Totem Clothing es una marca de ropa urbana que se enfoca en darle estilo las <br> personas que sienten queno encajan del todo en el estigma de lo urbano en una ciudad tan inusual como Bogotá 
+            </p>
+        </div>
+        <div class="redes">
+            <h3>Redes</h3>
+            <div class="redescont">
+                <a class="aredes" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                <a class="aredes" href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                <a class="aredes" href="https://web.whatsapp.com/"><i class="bi bi-whatsapp"></i></a>
+            </div>
         </div>
 
-    </div>
-    <div class="piepagina">
-        <p class="parrafo">
-            Totem Clothing es una marca de ropa urbana que se enfoca en darle estilo las <br> personas que sienten queno encajan del todo en el estigma de lo urbano en una ciudad tan inusual como Bogotá 
-        </p>
-    </div>
-    <div class="redes">
-        <h3>Redes</h3>
-        <div class="redescont">
-            <i class="bi bi-facebook"></i>
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-whatsapp"></i>
-        </div>
-    </div>
-
-</footer>
+    </footer>
 </body>
 </html>

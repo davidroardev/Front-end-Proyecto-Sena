@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Harmattan:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://scontent.cdninstagram.com/v/t51.2885-19/403850613_1397650241169534_5701784533090272667_n.jpg?stp=cp0_dst-jpg_s110x80&_nc_cat=110&ccb=1-7&_nc_sid=bf7eb4&_nc_ohc=xKDMkQKz-asQ7kNvgEjYOnv&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&oh=00_AYBD4Ep7gXtiCeDBD80QHmnqD1TZ44kO_U_3kgmqY6_LEg&oe=67496D17" type="image/x-icon">
+    <link rel="stylesheet" href="/estilos/styles.css">
+    <link rel="stylesheet" href="/estilos/registros.css">
+    <script src="/Scripts/hamburguesa.js" defer></script>
+    <script src="/Scripts-back/createProducto.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>ProductosController</title>
+</head>
+<body>
+    <header>
+        
+        <img class="logo" src="https://scontent.cdninstagram.com/v/t51.2885-19/403850613_1397650241169534_5701784533090272667_n.jpg?stp=cp0_dst-jpg_s110x80&_nc_cat=110&ccb=1-7&_nc_sid=bf7eb4&_nc_ohc=xKDMkQKz-asQ7kNvgEjYOnv&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&oh=00_AYBD4Ep7gXtiCeDBD80QHmnqD1TZ44kO_U_3kgmqY6_LEg&oe=67496D17" alt="">
+    
+    <button id="abrir" class="abrir-menu"><i class="bi bi-three-dots"></i></button>
+    
+    <nav class="nav" id="nav">
+        <button class="cerrar-menu" id="cerrar"><i class="bi bi-x-square"></i></button>
+        <ul class="nav-list">
+            <li><a class="links" href="index.html">Home</a></li>
+            <li><a class="links" href="">Diseños</a></li>
+            <li><a class="links" href="">Novedades</a></li>
+            <li><a class="links" href="Registro-inicio.html">Iniciar Sesion/Registro </a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main class="maincont">
+
+        <section class="dashcont">
+            <h2 class="dashh2">Desde Aqui puedes ver Datos e inventario de totem <br>
+            Porfavor selecciona una opcion:</h2>
+            <nav class="dash" >
+                <ul class="dashul">
+                    <li><a class="dashlink" href="">Usuarios</a></li>
+                    <li><a class="dashlink" href="/Paginas/productos.html">Productos</a></li>
+                    <li><a class="dashlink c" href="index.html">Cerrar Sesion</a></li>
+                </ul>
+            </nav>
+            
+            <section class="dash">
+                <h2 class="dashh2">Crear Productos</h2>
+                <form class="registerform" id="productosForm">
+
+                    <fieldset class="fieldset">
+                    <div class="cabezaform">
+                        <div class="imglogoformcont">
+                            <img  class="imgform" src="/Imagenes/logo sinfondo-05-comprimido.png" alt=""> 
+                        </div>
+        
+                        <h2>Datos del Producto</h2>
+                    </div>
+                    
+                    <div class="cuerpoform">
+                        <div class="labelcont"> 
+                            <label for="id" class="label" >Id del registro:</label>
+                            <input class="imput" type="number" name="id" id="idRegistro" minlength="2" max="15" placeholder="Id del registro" required>
+                        </div>
+
+                        <div class="labelcont"> 
+                            <label for="id_producto" class="label" >Id del prodcuto:</label>
+                            <input class="imput" type="text" name="id_producto" id="idProducto" minlength="2" max="15" placeholder="Id del Producto" required>
+                        </div>
+
+                        <div class="labelcont"> 
+                            <label for="tipo_producto" class="label" >Tipo de producto</label>
+                            <input class="imput" type="text" name="tipo_producto" id="tipoProducto" minlength="2" max="15" placeholder="Tipo de producto" required>
+                        </div>
+                        
+                        <div class="labelcont"> 
+                            <label for="nombre" class="label" >Nombre de de Producto:</label>
+                            <input class="imput" type="text" name="nombre" id="nombre" minlength="2" max="15" placeholder="Nombre" required>
+                        </div>
+
+                        <div class="labelcont"> 
+                            <label for="talla" class="label" > Talla:</label>
+                            <input class="imput" type="text" name="talla" id="talla"  max="15" placeholder="Talla" required>
+                        </div>
+                        
+                        <div class="labelcont"> 
+                            <label for="color" class="label" >Color:</label>
+                            <input class="imput" type="text" name="color" id="color" minlength="2" max="15" placeholder="Color" required>
+                        </div>
+
+                        <div class="labelcont"> 
+                            <label for="existencias" class="label" >Existencias:</label>
+                            <input class="imput" type="number" name="existencias" id="existencias" minlength="2" max="15" placeholder="Numero de existencias" required>
+                        </div>
+                        
+                        <div class="labelcont"> 
+                            <label for="estado" class="label" >Estado:</label>
+                            <input class="imput" type="text" name="estado" id="estado" minlength="2" max="15" placeholder="Estado del producto" required>
+                        </div>
+
+                        <button class="boton" id="botoninicio" type="submit"> Crea El Producto</button>
+                    </div>
+                </fieldset>
+                <p id="loginMessage"></p>
+            </section>
+
+        </section>
+
+        
+    </main>
+
+    <footer class="footer">
+        <div class="contactenos">
+            <h3>Contactanos </h3>
+            <div class="divcontacto">
+                <p></p>numero
+                <p></p>direccion
+                <p></p>pais
+            </div>
+
+        </div>
+        <div class="piepagina">
+            <p class="parrafo">
+                Totem Clothing es una marca de ropa urbana que se enfoca en darle estilo las <br> personas que sienten queno encajan del todo en el estigma de lo urbano en una ciudad tan inusual como Bogotá 
+            </p>
+        </div>
+        <div class="redes">
+            <h3>Redes</h3>
+            <div class="redescont">
+                <a class="aredes" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                <a class="aredes" href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                <a class="aredes" href="https://web.whatsapp.com/"><i class="bi bi-whatsapp"></i></a>
+            </div>
+        </div>
+
+    </footer>
+</body>
+</html>
