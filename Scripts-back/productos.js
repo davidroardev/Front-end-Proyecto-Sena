@@ -12,9 +12,13 @@ window.onload = (event) =>{
     })
 };
 
+const apiUrl = 'https://proyecto-sena-bkend.vercel.app/'
+
 async function loadProductos() {
+
+    
     try {
-        const response = await fetch('http://localhost:3000/getproductos',{
+        const response = await fetch(`${apiUrl}/getproductos`,{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -88,7 +92,7 @@ async function loadProductos() {
 
 async function deleteProducto(id){
     try {
-        const response = await fetch(`http://localhost:3000/deleteProducto/${id}`,{
+        const response = await fetch(`${apiUrl}/deleteProducto/${id}`,{
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

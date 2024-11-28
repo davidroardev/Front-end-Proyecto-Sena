@@ -6,9 +6,11 @@ window.onload = (event) =>{
 
 };
 
+const apiUrl = 'https://proyecto-sena-bkend.vercel.app/'
+
 async function loadUsers() {
     try {
-        const response = await fetch('http://localhost:3000/getusers',{
+        const response = await fetch(`${apiUrl}/getusers`,{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'

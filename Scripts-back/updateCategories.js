@@ -1,4 +1,7 @@
 window.onload = async (event) =>{
+
+    const apiUrl = 'https://proyecto-sena-bkend.vercel.app/'
+
     const idProductos = getQueryParams('id');
     const productos = await loadProducto(idProductos);
     console.log(productos);
@@ -31,6 +34,8 @@ window.onload = async (event) =>{
 
 }
 
+const apiUrl = 'https://proyecto-sena-bkend.vercel.app/'
+
 function getQueryParams(params){
     const urlParams = new URLSearchParams(window.location.search);
     
@@ -39,7 +44,7 @@ function getQueryParams(params){
 
 async function loadProducto(id){
     try {
-        const response = await fetch(`http://localhost:3000/getproductosbyid/${id}`,{
+        const response = await fetch(`${apiUrl}/getproductosbyid/${id}`,{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -54,7 +59,7 @@ async function loadProducto(id){
 
 async function updateProducto(id, id_producto, tipo_producto,nombre,talla,color,existencias,estado){
     try {
-        const response = await fetch(`http://localhost:3000/updateproducto/${id}`,{
+        const response = await fetch(`${apiUrl}/updateproducto/${id}`,{
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

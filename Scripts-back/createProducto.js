@@ -1,4 +1,7 @@
 window.onload = (event) =>{
+
+    const apiUrl = 'https://proyecto-sena-bkend.vercel.app/'
+    
     const productoForm = document.getElementById('productosForm');
 
     productoForm.addEventListener('submit', async function(event) {
@@ -14,7 +17,7 @@ window.onload = (event) =>{
         const estado = document.getElementById('estado').value;
 
         try {
-            const response = await fetch('http://localhost:3000/createproductos',{
+            const response = await fetch(`${apiUrl}/createproductos`,{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
