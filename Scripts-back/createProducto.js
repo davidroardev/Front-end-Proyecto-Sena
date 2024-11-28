@@ -1,6 +1,6 @@
 window.onload = (event) =>{
 
-    const apiUrl = 'https://proyecto-sena-bkend.vercel.app/'
+    const apiUrl = 'https://proyecto-sena-bkend.vercel.app'
     
     const productoForm = document.getElementById('productosForm');
 

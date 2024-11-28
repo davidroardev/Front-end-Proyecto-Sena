@@ -34,7 +34,7 @@ window.onload = async (event) =>{
 
 }
 
-const apiUrl = 'https://proyecto-sena-bkend.vercel.app/'
+const apiUrl = 'https://proyecto-sena-bkend.vercel.app'
 
 function getQueryParams(params){
     const urlParams = new URLSearchParams(window.location.search);

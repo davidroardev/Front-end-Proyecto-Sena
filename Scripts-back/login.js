@@ -5,7 +5,7 @@ window.onload = (event) =>{
     const registerForm = document.getElementById('registerForm');
     const registerMessage = document.getElementById('registerMessage');
 
-     const apiUrl = 'https://proyecto-sena-bkend.vercel.app/'
+     const apiUrl = 'https://proyecto-sena-bkend.vercel.app'
 
     loginForm.addEventListener('submit', async function(event){
 
@@ -46,7 +46,8 @@ window.onload = (event) =>{
 
         event.preventDefault();//Previene que se envie el formulario y nos redirija a otr apagina
         
-
+        const apiUrl = 'https://proyecto-sena-bkend.vercel.app'
+        
         const NewUserName = document.getElementById('newUserName').value;
         const Newpassword = document.getElementById('newPassword').value;
         const apellido = document.getElementById('name').value
