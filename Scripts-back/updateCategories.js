@@ -69,7 +69,7 @@ async function updateProducto(id, id_producto, tipo_producto,nombre,talla,color,
         });
             if (response.ok){
                 window.alert('Producto Actualizado exitosamente');
-                window.location.href = '/Paginas/dashboard/Productos.html'
+                window.location.href = '/Paginas/dashboard/productos.html'
             }else{
                 window.alert('No se pudo Actualizar El Producto');
             }
