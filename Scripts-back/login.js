@@ -47,7 +47,7 @@ window.onload = (event) =>{
         event.preventDefault();//Previene que se envie el formulario y nos redirija a otr apagina
         
         const apiUrl = 'https://proyecto-sena-bkend.vercel.app'
-        
+
         const NewUserName = document.getElementById('newUserName').value;
         const Newpassword = document.getElementById('newPassword').value;
         const apellido = document.getElementById('name').value
@@ -69,6 +69,8 @@ window.onload = (event) =>{
             if (response.ok){
                 registerMessage.textContent = 'Registro Exitoso';
                 registerMessage.style.color = 'green';
+                window.alert('registro exitoso');
+                location.reload();
             }else{
                 registerMessage.textContent = data.message||'Error en el Registro';
                 registerMessage.style.color = 'red';
